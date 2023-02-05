@@ -1,0 +1,63 @@
+[tool.poetry]
+name = "acrclient"
+version = "0.0.0"
+description = "API wrapper for the v2 ACRCloud API."
+authors = ["RaBe IT-Reaktion <it@rabe.ch>"]
+license = "AGPL-v3"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+readme = "README.md"
+packages = [
+    { include = "acrclient"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = ">=2.28.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.1"
+pytest-cov = "^4.0.0"
+wheel = "^0.38.4"
+types-requests = "^2.28.11"
+flake8 = "^6.0.0"
+flake8-docstrings = "^1.6.0"
+flake8-string-format = "^0.3.0"
+flake8-tuple = "^0.4.1"
+freezegun = "^1.2.2"
+requests-mock = "^1.10.0"
+black = "^23.1.0"
+isort = "^5.11.4"
+Markdown = "^3.4.1"
+pytest-mypy = "^0.10.3"
+pytest-pylint = "^0.19.0"
+pytest-random-order = "^1.1.0"
+
+
+[tool.isort]
+line_length = 120
+profile = "black"
+
+[tool.pylint.format]
+max-line-lenth = 120
+
+[tool.pylint.messages_control]
+# C0114 = missing-module-docstring
+# C0116 = missing-function-docstring
+disable = ["C0114","C0116"]
+
+[tool.pytest.ini_options]
+minversion = "7.2"
+addopts = "-ra -q --random-order --doctest-glob='*.md' --doctest-modules --cov=acrclient --cov-fail-under=100 --pylint --mypy"
+filterwarnings = [
+    "ignore::pytest.PytestRemovedIn8Warning:pytest_pylint",
+    "ignore::DeprecationWarning:pytest_pylint",
+    "ignore::DeprecationWarning:pylint"
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
