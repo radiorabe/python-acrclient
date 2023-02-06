@@ -1,24 +1,25 @@
 import requests_mock
 
-import acrclient
+from acrclient import Client
+from acrclient.client import _Auth
 
 
 def test_client():
-    client = acrclient.Client("bearer-token")
-    assert isinstance(client, acrclient.Client)
-    assert client.bearer_token == "bearer-token"
+    client = Client(_Auth("bearer-token"))
+    assert isinstance(client, Client)
+    assert isinstance(client.auth, _Auth)
     assert client.base_url == "https://eu-api-v2.acrcloud.com"
 
 
-def test_request():
-    client = acrclient.Client("bearer-token")
+def test_client_get():
+    client = Client(_Auth("bearer-token"))
     with requests_mock.Mocker() as mock:
         mock.get("https://eu-api-v2.acrcloud.com/foo", json={})
-        client.request("/foo")
+        client.get("/foo")
 
 
-def test_get_bm_cs_projects_results():
-    client = acrclient.Client("bearer-token")
+def test_client_get_bm_cs_projects_results():
+    client = Client(_Auth("bearer-token"))
     with requests_mock.Mocker() as mock:
         mock.get(
             f"{client.base_url}/api/bm-cs-projects/project-id/streams/stream-id/results",
