@@ -36,6 +36,26 @@ poetry install
 poetry run pytest
 ```
 
+## Testing
+
+We run regular e2e acceptance tests on real data through pytest using our own ACRCloud account
+as the data source.
+These tests are scheduled to run at a regular interval in GitHub Actions with
+[.github/workflows/schedule.yaml](./.github/workflows/schedule.yaml).
+
+If you would like to run the acceptance test suite locally using your own key, you can supply
+a bearer token on the command line:
+
+```bash
+poetry run pytest --acr-bearer-token="<bearer-token>"
+```
+
+To configure this in CI we use and recommend setting this via `PYTEST_ADDOPTS` env:
+
+```bash
+PYTEST_ADDOPTS='--acr-bearer-token="<bearer-token>"'
+```
+
 ## Release Management
 
 The CI/CD setup uses semantic commit messages following the [conventional commits standard](https://www.conventionalcommits.org/en/v1.0.0/).
