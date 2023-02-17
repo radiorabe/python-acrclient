@@ -46,7 +46,7 @@ class Client:
             seconds. If the backoff_factor is 0.1, then :func:`Retry.sleep` will sleep
             for [0.0s, 0.2s, 0.4s, ...] between retries. It will never be longer
             than `backoff_max`.
-            By default, backoff is disabled (set to 0).
+            By default, backoff is set to 0.1.
         """
 
         def __init__(
