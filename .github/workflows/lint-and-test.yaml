@@ -8,7 +8,7 @@ on:
       - gh-pages
 
 jobs:
-  call-workflow:
-    uses: radiorabe/actions/.github/workflows/test-pre-commit.yaml@main
+  pre-commit:
+    uses: radiorabe/actions/.github/workflows/test-pre-commit.yaml@v0.7.0
   pytest:
-    uses: radiorabe/actions/.github/workflows/test-python-poetry.yaml@main
+    uses: radiorabe/actions/.github/workflows/test-python-poetry.yaml@v0.7.0

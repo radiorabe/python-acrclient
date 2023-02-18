@@ -22,47 +22,48 @@ class _Auth(AuthBase):  # pylint: disable=too-few-public-methods
 
 
 class Client:
-    """ACRCloud client to fetch metadata.
+    """Client class with various methods to call ACRCloud API v2 endpoints.
 
-    >>> bearer_token = "bearer-token"
-    >>> config = Client.Config(retries= 5, backoff_factor= 0.1)
-    >>> client = Client(bearer_token, config=config)
+    Examples:
+        Create an instance with configuration.
+        ```python
+        >>> bearer_token = "bearer-token"
+        >>> config = Client.Config(retries= 5, backoff_factor= 0.1)
+        >>> client = Client(bearer_token, config=config)
 
-    :param str bearer_token
-        The bearer token for ACRCloud.
+        ```
     """
 
     class Config:
-        """Configuration for acrclient.
-
-        :param int retries
-            Total number of retries to allow.
-
-        :param float backoff_factor
-            A backoff factor to apply between attempts after the second try
-            (most errors are resolved immediately by a second try without a
-            delay). urllib3 will sleep for::
-                {backoff factor} * (2 ** ({number of total retries} - 1))
-            seconds. If the backoff_factor is 0.1, then :func:`Retry.sleep` will sleep
-            for [0.0s, 0.2s, 0.4s, ...] between retries. It will never be longer
-            than `backoff_max`.
-            By default, backoff is set to 0.1.
-        """
+        """Configuration for acrclient."""
 
         def __init__(
             self,
             retries: Union[bool | int | None] = 5,
             backoff_factor: float = 0.1,
-        ):
+        ) -> None:
+            """
+            Parameters:
+                retries: Total number of retries to allow.
+
+                backoff_factor: A backoff factor to apply between attempts after the
+                    second try (most errors are resolved immediately by a second try
+                    without a delay). urllib3 will sleep for::
+                        {backoff factor} * (2 ** ({number of total retries} - 1))
+                    seconds. If the backoff_factor is 0.1, then :func:`Retry.sleep`
+                    will sleep for [0.0s, 0.2s, 0.4s, ...] between retries. It will
+                    never be longer than `backoff_max`.
+                    By default, backoff is set to 0.1.
+            """
             self._retries: Union[bool | int | None] = retries
             self._backoff_factor: float = backoff_factor
 
         @property
-        def retries(self):
+        def retries(self) -> Union[bool | int | None]:
             return self._retries
 
         @property
-        def backoff_factor(self):
+        def backoff_factor(self) -> float:
             return self._backoff_factor
 
     def __init__(
@@ -70,7 +71,11 @@ class Client:
         bearer_token: str,
         base_url: str = "https://eu-api-v2.acrcloud.com",
         config: Optional[Config] = None,
-    ):
+    ) -> None:
+        """
+        Parameters:
+            bearer_token: The bearer token for ACRCloud.
+        """
         self.base_url: str = base_url
 
         self._config: Optional[Client.Config] = config or Client.Config()
@@ -86,8 +91,21 @@ class Client:
             ),
         )
 
-    def get(self, path: str, params: Any = None, **kwargs) -> Response:
-        """Fetch JSON data from ACRCloud API with set Access Key param."""
+    def get(
+        self,
+        path: str,
+        params: Any = None,
+        **kwargs: Any,
+    ) -> Response:
+        """Fetch JSON data from ACRCloud API with set Access Key param.
+
+        Parameters:
+            path: URL path
+            params: Parameters for request (usually used as GET params)
+            **kwargs: Get passed to `requests.get`
+        Returns:
+            Response object
+        """
         url = f"{self.base_url}{path}"
         if not kwargs.get("timeout"):
             kwargs["timeout"] = 60
@@ -97,7 +115,21 @@ class Client:
         response.raise_for_status()
         return response
 
-    def json(self, path: str, params: Any = None, **kwargs) -> Any:
+    def json(
+        self,
+        path: str,
+        params: Any = None,
+        **kwargs: Any,
+    ) -> Any:
+        """Get the json results of a get call.
+
+        Parameters:
+            path: URL path
+            params: Parameters for request (usually used as GET params)
+            **kwargs: Get passed to `requests.get`
+        Returns:
+            Data from API
+        """
         response = self.get(path, params=params, **kwargs)
         return response.json()
 
@@ -106,8 +138,18 @@ class Client:
         project_id: int,
         stream_id: str,
         params: Optional[GetBmCsProjectsResultsParams] = None,
-        **kwargs,
+        **kwargs: Any,
     ) -> Any:
+        """Get Custom Broadcast Monitoring Streams Results from ACRCloud.
+
+        Parameters:
+            project_id: Custom Broadcast Monitoring Project ID
+            stream_id: Custom Broadcast Monitoring Stream ID
+            params: GET parameters for request
+            **kwargs: Get passed to `requests.get`
+        Returns:
+            Data from API
+        """
         return self.json(
             path=f"/api/bm-cs-projects/{project_id}/streams/{stream_id}/results",
             params=params,
