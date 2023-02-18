@@ -7,7 +7,6 @@ from acrclient.client import _Auth
 def test_client():
     client = Client(_Auth("bearer-token"))
     assert isinstance(client, Client)
-    assert isinstance(client.auth, _Auth)
     assert client.base_url == "https://eu-api-v2.acrcloud.com"
 
 

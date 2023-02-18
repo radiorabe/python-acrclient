@@ -38,11 +38,7 @@ pytest-random-order = "^1.1.0"
 
 
 [tool.isort]
-line_length = 120
 profile = "black"
-
-[tool.pylint.format]
-max-line-lenth = 120
 
 [tool.pylint.messages_control]
 # C0114 = missing-module-docstring
