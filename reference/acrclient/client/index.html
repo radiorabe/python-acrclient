@@ -928,7 +928,11 @@
           <td>
                 <code><span title="typing.Union">Union</span>[bool | int | None]</code>
           </td>
-          <td><p>Total number of retries to allow.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Total number of retries to allow.</p>
+            </div>
+          </td>
           <td>
                 <code>5</code>
           </td>
@@ -938,14 +942,18 @@
           <td>
                 <code>float</code>
           </td>
-          <td><p>A backoff factor to apply between attempts after the
+          <td>
+            <div class="doc-md-description">
+              <p>A backoff factor to apply between attempts after the
 second try (most errors are resolved immediately by a second try
 without a delay). urllib3 will sleep for::
     {backoff factor} * (2 ** ({number of total retries} - 1))
 seconds. If the backoff_factor is 0.1, then :func:<code>Retry.sleep</code>
 will sleep for [0.0s, 0.2s, 0.4s, ...] between retries. It will
 never be longer than <code>backoff_max</code>.
-By default, backoff is set to 0.1.</p></td>
+By default, backoff is set to 0.1.</p>
+            </div>
+          </td>
           <td>
                 <code>0.1</code>
           </td>
@@ -1038,7 +1046,11 @@ By default, backoff is set to 0.1.</p></td>
           <td>
                 <code>str</code>
           </td>
-          <td><p>The bearer token for ACRCloud.</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>The bearer token for ACRCloud.</p>
+            </div>
+          </td>
           <td>
               <em>required</em>
           </td>
@@ -1131,7 +1143,11 @@ By default, backoff is set to 0.1.</p></td>
           <td>
                 <code>str</code>
           </td>
-          <td><p>URL path</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>URL path</p>
+            </div>
+          </td>
           <td>
               <em>required</em>
           </td>
@@ -1141,7 +1157,11 @@ By default, backoff is set to 0.1.</p></td>
           <td>
                 <code><span title="typing.Any">Any</span></code>
           </td>
-          <td><p>Parameters for request (usually used as GET params)</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Parameters for request (usually used as GET params)</p>
+            </div>
+          </td>
           <td>
                 <code>None</code>
           </td>
@@ -1151,7 +1171,11 @@ By default, backoff is set to 0.1.</p></td>
           <td>
                 <code><span title="typing.Any">Any</span></code>
           </td>
-          <td><p>Get passed to <code>requests.get</code></p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Get passed to <code>requests.get</code></p>
+            </div>
+          </td>
           <td>
                 <code>{}</code>
           </td>
@@ -1172,7 +1196,11 @@ By default, backoff is set to 0.1.</p></td>
           <td>
                 <code><span title="requests.models.Response">Response</span></code>
           </td>
-          <td><p>Response object</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Response object</p>
+            </div>
+          </td>
         </tr>
     </tbody>
   </table>
@@ -1260,7 +1288,11 @@ By default, backoff is set to 0.1.</p></td>
           <td>
                 <code>int</code>
           </td>
-          <td><p>Custom Broadcast Monitoring Project ID</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Custom Broadcast Monitoring Project ID</p>
+            </div>
+          </td>
           <td>
               <em>required</em>
           </td>
@@ -1270,7 +1302,11 @@ By default, backoff is set to 0.1.</p></td>
           <td>
                 <code>str</code>
           </td>
-          <td><p>Custom Broadcast Monitoring Stream ID</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Custom Broadcast Monitoring Stream ID</p>
+            </div>
+          </td>
           <td>
               <em>required</em>
           </td>
@@ -1280,7 +1316,11 @@ By default, backoff is set to 0.1.</p></td>
           <td>
                 <code><span title="typing.Optional">Optional</span>[<a class="autorefs autorefs-internal" title="acrclient.models.GetBmCsProjectsResultsParams" href="../models/#acrclient.models.GetBmCsProjectsResultsParams">GetBmCsProjectsResultsParams</a>]</code>
           </td>
-          <td><p>GET parameters for request</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>GET parameters for request</p>
+            </div>
+          </td>
           <td>
                 <code>None</code>
           </td>
@@ -1290,7 +1330,11 @@ By default, backoff is set to 0.1.</p></td>
           <td>
                 <code><span title="typing.Any">Any</span></code>
           </td>
-          <td><p>Get passed to <code>requests.get</code></p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Get passed to <code>requests.get</code></p>
+            </div>
+          </td>
           <td>
                 <code>{}</code>
           </td>
@@ -1311,7 +1355,11 @@ By default, backoff is set to 0.1.</p></td>
           <td>
                 <code><span title="typing.Any">Any</span></code>
           </td>
-          <td><p>Data from API</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Data from API</p>
+            </div>
+          </td>
         </tr>
     </tbody>
   </table>
@@ -1397,7 +1445,11 @@ By default, backoff is set to 0.1.</p></td>
           <td>
                 <code>str</code>
           </td>
-          <td><p>URL path</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>URL path</p>
+            </div>
+          </td>
           <td>
               <em>required</em>
           </td>
@@ -1407,7 +1459,11 @@ By default, backoff is set to 0.1.</p></td>
           <td>
                 <code><span title="typing.Any">Any</span></code>
           </td>
-          <td><p>Parameters for request (usually used as GET params)</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Parameters for request (usually used as GET params)</p>
+            </div>
+          </td>
           <td>
                 <code>None</code>
           </td>
@@ -1417,7 +1473,11 @@ By default, backoff is set to 0.1.</p></td>
           <td>
                 <code><span title="typing.Any">Any</span></code>
           </td>
-          <td><p>Get passed to <code>requests.get</code></p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Get passed to <code>requests.get</code></p>
+            </div>
+          </td>
           <td>
                 <code>{}</code>
           </td>
@@ -1438,7 +1498,11 @@ By default, backoff is set to 0.1.</p></td>
           <td>
                 <code><span title="typing.Any">Any</span></code>
           </td>
-          <td><p>Data from API</p></td>
+          <td>
+            <div class="doc-md-description">
+              <p>Data from API</p>
+            </div>
+          </td>
         </tr>
     </tbody>
   </table>
