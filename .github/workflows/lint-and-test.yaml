@@ -12,3 +12,5 @@ jobs:
     uses: radiorabe/actions/.github/workflows/test-pre-commit.yaml@v0.13.1
   pytest:
     uses: radiorabe/actions/.github/workflows/test-python-poetry.yaml@v0.13.1
+    with:
+      version: "3.9"
