@@ -22,7 +22,7 @@ cachecontrol = "^0.13.0"
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.3.1"
 pytest-cov = "^4.0.0"
-wheel = "^0.40.0"
+wheel = ">=0.40,<0.42"
 types-requests = "^2.28.11"
 flake8 = "^6.0.0"
 flake8-docstrings = "^1.6.0"
