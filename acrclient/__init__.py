@@ -16,4 +16,5 @@ Create an instance and pass it a bearer token:
 See [`Client`](./client/#acrclient.client.Client) for available methods and options.
 
 """
+
 from .client import Client
