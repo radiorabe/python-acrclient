@@ -1,4 +1,4 @@
-from typing import TypedDict
+from typing import Literal, TypedDict
 
 
 class GetBmCsProjectsResultsParams(TypedDict):
@@ -14,3 +14,14 @@ class GetBmCsProjectsResultsParams(TypedDict):
     """Return the results with played_duration <= max_duration seconds (default: 3600)"""
     isrc_country: str
     """Only return results that match the isrc country code (E.g. DE, FR, IT, US)"""
+
+
+class GetExternalMetadataTracksParams(TypedDict):
+    """Parameters for getting music platforms metadata and links"""
+
+    type: str
+    """ACRCloud Music ID"""
+    acr_id: str
+    """1 or 0, if you set it to 1, the response metadata  will contain the contributors and works
+    metadata if the tracks have"""
+    include_works: Literal[0, 1]

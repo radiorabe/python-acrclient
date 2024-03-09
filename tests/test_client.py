@@ -25,3 +25,10 @@ def test_client_get_bm_cs_projects_results():
             json={"data": {}},
         )
         client.get_bm_cs_projects_results("project-id", "stream-id")
+
+
+def test_client_get_external_metadata_tracks():
+    client = Client(_Auth("bearer-token"))
+    with requests_mock.Mocker() as mock:
+        mock.get(f"{client.base_url}/api/external-metadata/tracks", json={"data": [{}]})
+        client.get_external_metadata_tracks()

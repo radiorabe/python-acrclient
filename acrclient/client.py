@@ -5,9 +5,10 @@ from typing import Any, Optional, Union
 from requests import Session
 from requests.adapters import HTTPAdapter, Retry
 from requests.auth import AuthBase
+from requests.exceptions import HTTPError
 from requests.models import PreparedRequest, Response
 
-from .models import GetBmCsProjectsResultsParams
+from .models import GetBmCsProjectsResultsParams, GetExternalMetadataTracksParams
 
 
 class _Auth(AuthBase):  # pylint: disable=too-few-public-methods
@@ -155,3 +156,14 @@ class Client:
             params=params,
             **kwargs,
         ).get("data")
+
+    def get_external_metadata_tracks(
+        self, params: Optional[GetExternalMetadataTracksParams] = None
+    ) -> list:
+        try:
+            return self.json(path="/api/external-metadata/tracks", params=params).get(
+                "data"
+            )
+        except HTTPError as error:
+            print(error)
+            return []
