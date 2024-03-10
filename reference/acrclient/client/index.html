@@ -403,7 +403,7 @@
         <li class="md-nav__item">
   <a href="#acrclient.client" class="md-nav__link">
     <span class="md-ellipsis">
-      acrclient.client
+      client
     </span>
   </a>
   
@@ -432,7 +432,7 @@
           <li class="md-nav__item">
   <a href="#acrclient.client.Client.Config.__init__" class="md-nav__link">
     <span class="md-ellipsis">
-      __init__()
+      __init__
     </span>
   </a>
   
@@ -446,7 +446,7 @@
           <li class="md-nav__item">
   <a href="#acrclient.client.Client.__init__" class="md-nav__link">
     <span class="md-ellipsis">
-      __init__()
+      __init__
     </span>
   </a>
   
@@ -455,7 +455,7 @@
           <li class="md-nav__item">
   <a href="#acrclient.client.Client.get" class="md-nav__link">
     <span class="md-ellipsis">
-      get()
+      get
     </span>
   </a>
   
@@ -464,7 +464,7 @@
           <li class="md-nav__item">
   <a href="#acrclient.client.Client.get_bm_cs_projects_results" class="md-nav__link">
     <span class="md-ellipsis">
-      get_bm_cs_projects_results()
+      get_bm_cs_projects_results
     </span>
   </a>
   
@@ -473,7 +473,7 @@
           <li class="md-nav__item">
   <a href="#acrclient.client.Client.json" class="md-nav__link">
     <span class="md-ellipsis">
-      json()
+      json
     </span>
   </a>
   
@@ -552,6 +552,7 @@
 <div class="doc doc-object doc-module">
 
 
+
 <a id="acrclient.client"></a>
   <div class="doc doc-contents first">
 
@@ -571,7 +572,7 @@
 
 
 <h2 id="acrclient.client.Client" class="doc doc-heading">
-        <code>Client</code>
+          <code>Client</code>
 
 
 </h2>
@@ -582,6 +583,8 @@
   
       <p>Client class with various methods to call ACRCloud API v2 endpoints.</p>
 
+
+
 <p><strong>Examples:</strong></p>
     <p>Create an instance with configuration.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">bearer_token</span> <span class="o">=</span> <span class="s2">&quot;bearer-token&quot;</span>
@@ -589,10 +592,9 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="n">bearer_token</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
 </code></pre></div></p>
 
-
-        <details class="quote">
-          <summary>Source code in <code>acrclient/client.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-24"> 24</a></span>
+            <details class="quote">
+              <summary>Source code in <code>acrclient/client.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-24"> 24</a></span>
 <span class="normal"><a href="#__codelineno-0-25"> 25</a></span>
 <span class="normal"><a href="#__codelineno-0-26"> 26</a></span>
 <span class="normal"><a href="#__codelineno-0-27"> 27</a></span>
@@ -860,7 +862,7 @@
 <a id="__codelineno-0-156" name="__codelineno-0-156"></a>            <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
 <a id="__codelineno-0-157" name="__codelineno-0-157"></a>        <span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 
@@ -878,7 +880,7 @@
 
 
 <h3 id="acrclient.client.Client.Config" class="doc doc-heading">
-        <code>Config</code>
+          <code>Config</code>
 
 
 </h3>
@@ -889,10 +891,9 @@
   
       <p>Configuration for acrclient.</p>
 
-
-        <details class="quote">
-          <summary>Source code in <code>acrclient/client.py</code></summary>
-          <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-37">37</a></span>
+            <details class="quote">
+              <summary>Source code in <code>acrclient/client.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-37">37</a></span>
 <span class="normal"><a href="#__codelineno-0-38">38</a></span>
 <span class="normal"><a href="#__codelineno-0-39">39</a></span>
 <span class="normal"><a href="#__codelineno-0-40">40</a></span>
@@ -954,11 +955,12 @@
 <a id="__codelineno-0-66" name="__codelineno-0-66"></a>    <span class="k">def</span> <span class="nf">backoff_factor</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <a id="__codelineno-0-67" name="__codelineno-0-67"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_backoff_factor</span>
 </code></pre></div></td></tr></table></div>
-        </details>
+            </details>
 
   
 
   <div class="doc doc-children">
+
 
 
 
@@ -973,13 +975,15 @@
 
 
 <h4 id="acrclient.client.Client.Config.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">retries</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">backoff_factor</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">retries</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">backoff_factor</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span></code>
 
 </h4>
 
 
   <div class="doc doc-contents ">
   
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1030,9 +1034,9 @@ By default, backoff is set to 0.1.</p>
     </tbody>
   </table>
 
-      <details class="quote">
-        <summary>Source code in <code>acrclient/client.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-40">40</a></span>
+          <details class="quote">
+            <summary>Source code in <code>acrclient/client.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-40">40</a></span>
 <span class="normal"><a href="#__codelineno-0-41">41</a></span>
 <span class="normal"><a href="#__codelineno-0-42">42</a></span>
 <span class="normal"><a href="#__codelineno-0-43">43</a></span>
@@ -1072,7 +1076,7 @@ By default, backoff is set to 0.1.</p>
 <a id="__codelineno-0-58" name="__codelineno-0-58"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_retries</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">bool</span> <span class="o">|</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="n">retries</span>
 <a id="__codelineno-0-59" name="__codelineno-0-59"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_backoff_factor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">backoff_factor</span>
 </code></pre></div></td></tr></table></div>
-      </details>
+          </details>
   </div>
 
 </div>
@@ -1083,7 +1087,9 @@ By default, backoff is set to 0.1.</p>
 
   </div>
 
+
 </div>
+
 
 
 <div class="doc doc-object doc-function">
@@ -1091,13 +1097,15 @@ By default, backoff is set to 0.1.</p>
 
 
 <h3 id="acrclient.client.Client.__init__" class="doc doc-heading">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">bearer_token</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="s1">&#39;https://eu-api-v2.acrcloud.com&#39;</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="n">bearer_token</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="s1">&#39;https://eu-api-v2.acrcloud.com&#39;</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h3>
 
 
   <div class="doc doc-contents ">
   
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1127,9 +1135,9 @@ By default, backoff is set to 0.1.</p>
     </tbody>
   </table>
 
-      <details class="quote">
-        <summary>Source code in <code>acrclient/client.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-69">69</a></span>
+          <details class="quote">
+            <summary>Source code in <code>acrclient/client.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-69">69</a></span>
 <span class="normal"><a href="#__codelineno-0-70">70</a></span>
 <span class="normal"><a href="#__codelineno-0-71">71</a></span>
 <span class="normal"><a href="#__codelineno-0-72">72</a></span>
@@ -1177,17 +1185,18 @@ By default, backoff is set to 0.1.</p>
 <a id="__codelineno-0-91" name="__codelineno-0-91"></a>        <span class="p">),</span>
 <a id="__codelineno-0-92" name="__codelineno-0-92"></a>    <span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-      </details>
+          </details>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="acrclient.client.Client.get" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 </h3>
 
@@ -1195,6 +1204,8 @@ By default, backoff is set to 0.1.</p>
   <div class="doc doc-contents ">
   
       <p>Fetch JSON data from ACRCloud API with set Access Key param.</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1251,32 +1262,12 @@ By default, backoff is set to 0.1.</p>
         </tr>
     </tbody>
   </table>
+      <p>Returns:
+    Response object</p>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><span title="requests.models.Response">Response</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Response object</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-      <details class="quote">
-        <summary>Source code in <code>acrclient/client.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-94"> 94</a></span>
+          <details class="quote">
+            <summary>Source code in <code>acrclient/client.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-94"> 94</a></span>
 <span class="normal"><a href="#__codelineno-0-95"> 95</a></span>
 <span class="normal"><a href="#__codelineno-0-96"> 96</a></span>
 <span class="normal"><a href="#__codelineno-0-97"> 97</a></span>
@@ -1322,17 +1313,18 @@ By default, backoff is set to 0.1.</p>
 <a id="__codelineno-0-115" name="__codelineno-0-115"></a>    <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
 <a id="__codelineno-0-116" name="__codelineno-0-116"></a>    <span class="k">return</span> <span class="n">response</span>
 </code></pre></div></td></tr></table></div>
-      </details>
+          </details>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="acrclient.client.Client.get_bm_cs_projects_results" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">get_bm_cs_projects_results</span><span class="p">(</span><span class="n">project_id</span><span class="p">,</span> <span class="n">stream_id</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">get_bm_cs_projects_results</span><span class="p">(</span><span class="n">project_id</span><span class="p">,</span> <span class="n">stream_id</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 </h3>
 
@@ -1340,6 +1332,8 @@ By default, backoff is set to 0.1.</p>
   <div class="doc doc-contents ">
   
       <p>Get Custom Broadcast Monitoring Streams Results from ACRCloud.</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1410,32 +1404,12 @@ By default, backoff is set to 0.1.</p>
         </tr>
     </tbody>
   </table>
+      <p>Returns:
+    Data from API</p>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><span title="typing.Any">Any</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Data from API</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-      <details class="quote">
-        <summary>Source code in <code>acrclient/client.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-136">136</a></span>
+          <details class="quote">
+            <summary>Source code in <code>acrclient/client.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-136">136</a></span>
 <span class="normal"><a href="#__codelineno-0-137">137</a></span>
 <span class="normal"><a href="#__codelineno-0-138">138</a></span>
 <span class="normal"><a href="#__codelineno-0-139">139</a></span>
@@ -1479,17 +1453,18 @@ By default, backoff is set to 0.1.</p>
 <a id="__codelineno-0-156" name="__codelineno-0-156"></a>        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
 <a id="__codelineno-0-157" name="__codelineno-0-157"></a>    <span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-      </details>
+          </details>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="acrclient.client.Client.json" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">json</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+          <code class="highlight language-python"><span class="n">json</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 </h3>
 
@@ -1497,6 +1472,8 @@ By default, backoff is set to 0.1.</p>
   <div class="doc doc-contents ">
   
       <p>Get the json results of a get call.</p>
+
+
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1553,32 +1530,12 @@ By default, backoff is set to 0.1.</p>
         </tr>
     </tbody>
   </table>
+      <p>Returns:
+    Data from API</p>
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>
-                <code><span title="typing.Any">Any</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Data from API</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-      <details class="quote">
-        <summary>Source code in <code>acrclient/client.py</code></summary>
-        <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-118">118</a></span>
+          <details class="quote">
+            <summary>Source code in <code>acrclient/client.py</code></summary>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-118">118</a></span>
 <span class="normal"><a href="#__codelineno-0-119">119</a></span>
 <span class="normal"><a href="#__codelineno-0-120">120</a></span>
 <span class="normal"><a href="#__codelineno-0-121">121</a></span>
@@ -1612,7 +1569,7 @@ By default, backoff is set to 0.1.</p>
 <a id="__codelineno-0-133" name="__codelineno-0-133"></a>    <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 <a id="__codelineno-0-134" name="__codelineno-0-134"></a>    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-      </details>
+          </details>
   </div>
 
 </div>
@@ -1622,6 +1579,7 @@ By default, backoff is set to 0.1.</p>
   </div>
 
   </div>
+
 
 </div>
 
