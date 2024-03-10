@@ -1,7 +1,9 @@
+"""Models for acr-client."""
+
 from typing import TypedDict
 
 
-class GetBmCsProjectsResultsParams(TypedDict):
+class GetBmCsProjectsResultsParams(TypedDict):  # pragma: no cover
     """Parameters for getting BM projects custom streams results."""
 
     type: str
@@ -11,6 +13,6 @@ class GetBmCsProjectsResultsParams(TypedDict):
     min_duration: int
     """Return the results of played_duration >= min_duration seconds (default: 0)"""
     max_duration: int
-    """Return the results with played_duration <= max_duration seconds (default: 3600)"""
+    """Return results with played_duration <= max_duration seconds (default: 3600)"""
     isrc_country: str
     """Only return results that match the isrc country code (E.g. DE, FR, IT, US)"""
