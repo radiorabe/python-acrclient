@@ -6,11 +6,10 @@ repos:
         language: system
         entry: black
         types: [python]
-      - id: isort
-        name: isort
-        language: system
-        entry: isort
-        types: [python]
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: 'v0.3.2'
+    hooks:
+      - id: ruff
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.4.0
     hooks:

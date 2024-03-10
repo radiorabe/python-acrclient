@@ -1,5 +1,4 @@
-"""
-Get started by importing the Client
+"""Get started by importing the Client.
 
 ```python
 >>> from acrclient import Client
@@ -17,4 +16,4 @@ See [`Client`](./client/#acrclient.client.Client) for available methods and opti
 
 """
 
-from .client import Client
+from .client import Client  # noqa: F401

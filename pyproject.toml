@@ -20,44 +20,29 @@ requests = ">=2.28.2"
 cachecontrol = ">=0.13,<0.15"
 
 [tool.poetry.group.dev.dependencies]
-pytest = ">=7.3.1,<9.0.0"
-pytest-cov = "^4.0.0"
-wheel = ">=0.40,<0.43"
-types-requests = "^2.28.11"
-flake8 = ">=6,<8"
-flake8-docstrings = "^1.6.0"
-flake8-string-format = "^0.3.0"
-flake8-tuple = "^0.4.1"
-freezegun = "^1.2.2"
-requests-mock = "^1.10.0"
 black = ">=23.3,<25.0"
-isort = "^5.11.4"
+freezegun = "^1.2.2"
 Markdown = "^3.3"
-pytest-mypy = "^0.10.3"
-pytest-pylint = ">=0.19,<0.22"
-pytest-random-order = "^1.1.0"
 mkdocstrings = {extras = ["python"], version = ">=0.21.2,<0.25.0"}
 mkdocs-material = "^9.1"
 mkdocs = "^1.4.2"
 mkdocs-gen-files = "^0.5.0"
 mkdocs-literate-nav = "^0.6.0"
 mkdocs-section-index = "^0.3.5"
-
-
-[tool.isort]
-profile = "black"
-
-[tool.pylint.messages_control]
-# C0114 = missing-module-docstring
-# C0116 = missing-function-docstring
-disable = ["C0114","C0116"]
+pytest = ">=8.1.1,<9.0.0"
+pytest-cov = "^4.0.0"
+pytest-mypy = "^0.10.3"
+pytest-random-order = "^1.1.0"
+pytest-ruff = "^0.3.1"
+requests-mock = "^1.10.0"
+ruff = "^0.3.2"
+types-requests = "^2.28.11"
+wheel = ">=0.40,<0.43"
 
 [tool.pytest.ini_options]
 minversion = "7.2"
-addopts = "-ra -q --random-order --doctest-glob='*.md' --doctest-modules --cov=acrclient --cov-fail-under=100 --ignore=docs/ --pylint --mypy"
+addopts = "-ra -q --random-order --doctest-glob='*.md' --doctest-modules --cov=acrclient --cov-fail-under=100 --ignore=docs/ --ruff --mypy"
 filterwarnings = [
-    "ignore::DeprecationWarning:pytest_pylint",
-    "ignore::DeprecationWarning:pylint"
 ]
 
 [build-system]
