@@ -591,11 +591,11 @@
 <a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;last: get the last results, day: get the day results, Default is day&quot;&quot;&quot;</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a>    <span class="n">date</span><span class="p">:</span> <span class="nb">str</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Get all the results on this date. The format is YYYYmmdd (E.g. 20210201)&quot;&quot;&quot;</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a>    <span class="n">min_duration</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>    <span class="n">min_duration</span><span class="p">:</span> <span class="n">NotRequired</span><span class="p">[</span><span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span>
 <a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the results of played_duration &gt;= min_duration seconds (default: 0)&quot;&quot;&quot;</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a>    <span class="n">max_duration</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>    <span class="n">max_duration</span><span class="p">:</span> <span class="n">NotRequired</span><span class="p">[</span><span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Return results with played_duration &lt;= max_duration seconds (default: 3600)&quot;&quot;&quot;</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a>    <span class="n">isrc_country</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>    <span class="n">isrc_country</span><span class="p">:</span> <span class="n">NotRequired</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span>
 <a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Only return results that match the isrc country code (E.g. DE, FR, IT, US)&quot;&quot;&quot;</span>
 </code></pre></div></td></tr></table></div>
             </details>
@@ -636,7 +636,7 @@
 
 
 <h3 id="acrclient.models.GetBmCsProjectsResultsParams.isrc_country" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">isrc_country</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">isrc_country</span><span class="p">:</span> <span class="n">NotRequired</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -657,7 +657,7 @@
 
 
 <h3 id="acrclient.models.GetBmCsProjectsResultsParams.max_duration" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">max_duration</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">max_duration</span><span class="p">:</span> <span class="n">NotRequired</span><span class="p">[</span><span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
@@ -678,7 +678,7 @@
 
 
 <h3 id="acrclient.models.GetBmCsProjectsResultsParams.min_duration" class="doc doc-heading">
-          <code class="highlight language-python"><span class="n">min_duration</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span></code>
+          <code class="highlight language-python"><span class="n">min_duration</span><span class="p">:</span> <span class="n">NotRequired</span><span class="p">[</span><span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span></code>
   
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-instance-attribute"><code>instance-attribute</code></small>
