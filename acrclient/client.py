@@ -47,6 +47,7 @@ class Client:
 
         def __init__(
             self: Self,
+            *,
             retries: bool | int | None = 5,
             backoff_factor: float = 0.1,
         ) -> None:
