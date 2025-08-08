@@ -628,14 +628,14 @@ mkdocs = ">=1.2"
 
 [[package]]
 name = "mkdocstrings"
-version = "0.29.1"
+version = "0.30.0"
 description = "Automatic documentation from sources, for MkDocs."
 optional = false
 python-versions = ">=3.9"
 groups = ["dev"]
 files = [
-    {file = "mkdocstrings-0.29.1-py3-none-any.whl", hash = "sha256:37a9736134934eea89cbd055a513d40a020d87dfcae9e3052c2a6b8cd4af09b6"},
-    {file = "mkdocstrings-0.29.1.tar.gz", hash = "sha256:8722f8f8c5cd75da56671e0a0c1bbed1df9946c0cef74794d6141b34011abd42"},
+    {file = "mkdocstrings-0.30.0-py3-none-any.whl", hash = "sha256:ae9e4a0d8c1789697ac776f2e034e2ddd71054ae1cf2c2bb1433ccfd07c226f2"},
+    {file = "mkdocstrings-0.30.0.tar.gz", hash = "sha256:5d8019b9c31ddacd780b6784ffcdd6f21c408f34c0bd1103b5351d609d5b4444"},
 ]
 
 [package.dependencies]
@@ -1262,4 +1262,4 @@ test = ["pytest (>=6.0.0)", "setuptools (>=65)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.11"
-content-hash = "0a8787a8eb26c0cd1028ffba5ac75629de2c4d263053d8b243ae12cf1beb7d8a"
+content-hash = "c091c0b879ba8fa8047d6adf59ffe132f229d665a35f3093d7b0a80a5287b13d"
