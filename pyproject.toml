@@ -38,11 +38,9 @@ ruff = ">=0.5.1,<0.15.0"
 types-requests = "^2.28.11"
 wheel = ">=0.40,<0.46"
 
-[tool.pytest.ini_options]
-minversion = "7.2"
-addopts = "-ra -q --random-order --doctest-glob='*.md' --doctest-modules --cov=acrclient --cov-fail-under=100 --ignore=docs/ --ruff --mypy"
-filterwarnings = [
-]
+[tool.pytest]
+minversion = "9.0"
+addopts = ["-ra", "-q", "--random-order", "--doctest-glob='*.md'", "--doctest-modules", "--cov=acrclient", "--cov-fail-under=100", "--ignore=docs/", "--ruff", "--mypy"]
 
 [build-system]
 requires = ["poetry-core"]
