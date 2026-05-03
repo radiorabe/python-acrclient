@@ -1539,23 +1539,20 @@ watchmedo = ["PyYAML (>=3.10)"]
 
 [[package]]
 name = "wheel"
-version = "0.46.3"
+version = "0.47.0"
 description = "Command line tool for manipulating wheel files"
 optional = false
 python-versions = ">=3.9"
 groups = ["dev"]
 files = [
-    {file = "wheel-0.46.3-py3-none-any.whl", hash = "sha256:4b399d56c9d9338230118d705d9737a2a468ccca63d5e813e2a4fc7815d8bc4d"},
-    {file = "wheel-0.46.3.tar.gz", hash = "sha256:e3e79874b07d776c40bd6033f8ddf76a7dad46a7b8aa1b2787a83083519a1803"},
+    {file = "wheel-0.47.0-py3-none-any.whl", hash = "sha256:212281cab4dff978f6cedd499cd893e1f620791ca6ff7107cf270781e587eced"},
+    {file = "wheel-0.47.0.tar.gz", hash = "sha256:cc72bd1009ba0cf63922e28f94d9d83b920aa2bb28f798a31d0691b02fa3c9b3"},
 ]
 
 [package.dependencies]
 packaging = ">=24.0"
 
-[package.extras]
-test = ["pytest (>=6.0.0)", "setuptools (>=77)"]
-
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.11"
-content-hash = "58dfaff32b9f636bca6bcc3b4c31e279e8feead979949124091c0d1bf7409543"
+content-hash = "ac2c98dd6299139fee01b7307c993132c05394987efcd11bcf82c49c677dbdfc"
