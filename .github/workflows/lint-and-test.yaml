@@ -7,10 +7,16 @@ on:
       - main
       - gh-pages
 
+permissions: {}
+
 jobs:
   pre-commit:
+    permissions:
+      contents: read
     uses: radiorabe/actions/.github/workflows/test-pre-commit.yaml@5dafb461cea1f8b296d89297dc6de7bd0891f0d2 # v0.44.2
   pytest:
+    permissions:
+      contents: read
     uses: radiorabe/actions/.github/workflows/test-python-poetry.yaml@5dafb461cea1f8b296d89297dc6de7bd0891f0d2 # v0.44.2
   github-actions:
     permissions:
