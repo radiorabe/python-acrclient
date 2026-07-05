@@ -7,10 +7,22 @@ on:
   release:
     types: [created]
 
+permissions: {}
+
 jobs:
   python-poetry:
     permissions:
-      contents: write # Required to push the gh-pages branch for documentation deployment
+      contents: write # for publishing gh-pages with mkdocs (unused)
     uses: radiorabe/actions/.github/workflows/release-python-poetry.yaml@5dafb461cea1f8b296d89297dc6de7bd0891f0d2 # v0.44.2
+    with:
+      deploy-mkdocs: false
     secrets:
       RABE_PYPI_TOKEN: ${{ secrets.RABE_PYPI_TOKEN }}
+  release-docs:
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: radiorabe/actions/.github/workflows/release-zensical.yaml@5dafb461cea1f8b296d89297dc6de7bd0891f0d2 # v0.44.2
+    with:
+      requirements: mkdocstrings mkdocstrings-python
